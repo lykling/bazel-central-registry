@@ -575,5 +575,6 @@ cc_library(
     deps = [
         ":common",
         "@eigen",
+        "@vtk",
     ],
 )
