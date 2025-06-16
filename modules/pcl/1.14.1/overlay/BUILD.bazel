@@ -570,7 +570,7 @@ cc_library(
         "visualization/include/**/*.h",
         "visualization/include/**/*.hpp",
         "visualization/include/**/*.mm",
-    ],
+    ]),
     includes = ["visualization/include"],
     deps = [
         ":common",
