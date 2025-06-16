@@ -567,7 +567,7 @@ cc_library(
         "visualization/src/**/*.cxx",
     ]),
     hdrs = glob([
-        "visualization/include/**/*.h"
+        "visualization/include/**/*.h",
         "visualization/include/**/*.hpp",
         "visualization/include/**/*.mm",
     ],
