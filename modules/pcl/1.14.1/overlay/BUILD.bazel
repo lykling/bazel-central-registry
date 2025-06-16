@@ -561,11 +561,16 @@ cc_library(
 
 cc_library(
     name = "visualization",
-    srcs = [
-        "visualization/include/pcl/visualization/common/impl/common.hpp",
-        "visualization/src/common/common.cpp",
+    srcs = glob([
+        "visualization/include/**/*.hpp",
+        "visualization/src/**/*.cpp",
+        "visualization/src/**/*.cxx",
+    ]),
+    hdrs = glob([
+        "visualization/include/**/*.h"
+        "visualization/include/**/*.hpp",
+        "visualization/include/**/*.mm",
     ],
-    hdrs = ["visualization/include/pcl/visualization/common/common.h"],
     includes = ["visualization/include"],
     deps = [
         ":common",
