@@ -341,7 +341,7 @@ cc_library(
         ":kdtree",
         ":sample_consensus",
         ":segmentation",
-        # ":visualization",
+        ":visualization",
     ],
 )
 
@@ -556,5 +556,19 @@ cc_library(
         ":filters",
         ":octree",
         ":search",
+    ],
+)
+
+cc_library(
+    name = "visualization",
+    srcs = [
+        "visualization/include/pcl/visualization/common/impl/common.hpp",
+        "visualization/src/common/common.cpp",
+    ],
+    hdrs = ["visualization/include/pcl/visualization/common/common.h"],
+    includes = ["visualization/include"],
+    deps = [
+        ":common",
+        "@eigen",
     ],
 )
